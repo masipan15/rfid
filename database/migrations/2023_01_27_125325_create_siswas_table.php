@@ -17,8 +17,9 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('id_siswa');
             $table->string('nama_siswa');
-            $table->string('jenis_kelamin   ');
+            $table->string('jenis_kelamin');
             $table->foreignId('nama_sekolah')->constrained('sekolahs')->onUpdate('cascade')->onDelete('restrict');
+            $table->string('status');
             $table->timestamps();
         });
     }
