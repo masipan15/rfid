@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <div>
                         <h3 class="main-content-label">
-                            Tambah Instansi
+                            Tambah Sekolah
                         </h3>
                     </div>
                     <form action="insert_sekolah" method="POST">

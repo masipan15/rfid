@@ -31,7 +31,8 @@
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $row->nama_sekolah }}</td>
-                                    <td><a href="#" target="_blank" type="button" class="btn btn-danger">Hapus</a></td>
+                                    <td><a href="edit_sekolah/{{$row->id}}"  type="button" class="btn btn-info">Edit</a>
+                                    <a href="delete_sekolah/{{$row->id}}"  type="button" class="btn btn-danger">Hapus</a></td>
                                 </tr>
                                 @endforeach
 

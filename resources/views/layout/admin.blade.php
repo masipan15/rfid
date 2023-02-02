@@ -120,8 +120,8 @@
                     </li>
                 </ul>
                 <li class="nav-header"><span class="nav-label">Goods</span></li>
-                <li class="nav-item {{ Route::is('suratmasuk', 'tambahbarang', 'editbarang') ? 'active' : '' }}">
-                    <a class="nav-link" href="/suratmasuk"><span class="shape1"></span><span class="shape2"></span><i
+                <li class="nav-item {{ Route::is('siswa', 'tambah_siswa', 'edit_siswa') ? 'active' : '' }}">
+                    <a class="nav-link" href="/siswa"><span class="shape1"></span><span class="shape2"></span><i
                             class="ti-package sidemenu-icon"></i><span class="sidemenu-label">Siswa/Siswi</span></a>
                 </li>
                 <li class="nav-item {{ Route::is('suratkeluar', 'tambahbarang', 'editbarang') ? 'active' : '' }}">

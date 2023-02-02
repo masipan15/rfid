@@ -26,9 +26,10 @@ class SekolahController extends Controller
         return redirect('sekolah');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('sekolah.edit');
+        $data = Sekolah::findorfail($id);
+        return view('sekolah.edit',compact('data'));
     }
 
     public function update($id, Request $request)
@@ -37,12 +38,14 @@ class SekolahController extends Controller
         $data->update([
             'nama_sekolah' => $request->nama_sekolah
         ]);
+
+        return redirect('sekolah');
     }
 
     public function delete($id)
     {
-        $data = sekolah::find($id);
+        $data = Sekolah::find($id);
         $data->delete();
-        $data->save();
+        return redirect('sekolah');
     }
 }

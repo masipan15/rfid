@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('siswas', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_siswa');
+            $table->string('nama_siswa');
+            $table->string('jenis_kelamin   ');
+            $table->foreignId('sekolahs')->constrained('nama_sekolah')->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();
         });
     }
