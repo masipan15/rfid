@@ -23,6 +23,14 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/maintenance', function () {
+    return view('maintenance');
+});
+
 //Login
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
