@@ -21,7 +21,7 @@ use Illuminate\Routing\RouteGroup;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
 //Login
 Route::get('/login', [LoginController::class, 'login'])->name('login');
