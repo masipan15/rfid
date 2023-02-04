@@ -25,11 +25,11 @@ Route::get('/', function () {
 
 Route::get('/profile', function () {
     return view('profile');
-});
+})->middleware('auth');
 
 Route::get('/maintenance', function () {
     return view('maintenance');
-});
+})->middleware('auth');
 
 //Login
 Route::get('/login', [LoginController::class, 'login'])->name('login');
