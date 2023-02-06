@@ -155,8 +155,9 @@
                 <div class="main-header-right">
 
                     <div class="dropdown main-profile-menu">
-                        <a class="d-flex" href="#">
-                            <span class="main-img-user"><img alt="avatar" class="image-previewer"></span>
+                        <a class="d-flex" href="">
+                            <span class="main-imuser"><img alt="avatar" style="width: 50px;
+                            " src="https://resolusidigital.com/wp-content/uploads/2021/12/foto-profil-wa-tidak-bisa-muncul11.jpg" class="image-previewer"></span>
                         </a>
                         <div class="dropdown-menu">
                             <div class="header-navheading">
