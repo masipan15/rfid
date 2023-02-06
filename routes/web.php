@@ -21,7 +21,7 @@ use Illuminate\Routing\RouteGroup;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
 //Login
 Route::get('/login', [LoginController::class, 'login'])->name('login');
@@ -31,7 +31,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Halaman Sekolah
 
-    //
+//
 
 Route::get('/sekolah', [SekolahController::class, 'index'])->name('sekolah')->middleware('auth');
 Route::get('/tambah_sekolah', [SekolahController::class, 'tambah'])->name('tambah_sekolah')->middleware('auth');
@@ -51,5 +51,4 @@ Route::get('/delete_siswa/{id}', [SiswaController::class, 'delete'])->name('dele
 Route::get('/delete_siswa/{id}', [AbsenController::class, 'delete'])->name('delete_siswa')->middleware('auth');
 
 
-Route::get('/absen',[AbsenController::class,'absen'])->name('absen');
-
+Route::get('/absen', [AbsenController::class, 'absen'])->name('absen');
