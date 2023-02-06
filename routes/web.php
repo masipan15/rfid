@@ -31,7 +31,6 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Halaman Sekolah
 
-    //
 
 Route::get('/sekolah', [SekolahController::class, 'index'])->name('sekolah')->middleware('auth');
 Route::get('/tambah_sekolah', [SekolahController::class, 'tambah'])->name('tambah_sekolah')->middleware('auth');
