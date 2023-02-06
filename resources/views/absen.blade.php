@@ -9,8 +9,8 @@
 <body>
     <style>
         body{
-            background-color: rgb(36, 7, 7);
-        }   
+            background-color: black;
+        }
     </style>
 
 </body>

@@ -155,15 +155,16 @@
                 <div class="main-header-right">
 
                     <div class="dropdown main-profile-menu">
-                        <a class="d-flex" href="#">
-                            <span class="main-img-user"><img alt="avatar" class="image-previewer"></span>
+                        <a class="d-flex" href="">
+                            <span class="main-imuser"><img alt="avatar" style="width: 50px;
+                            " src="https://resolusidigital.com/wp-content/uploads/2021/12/foto-profil-wa-tidak-bisa-muncul11.jpg" class="image-previewer"></span>
                         </a>
                         <div class="dropdown-menu">
                             <div class="header-navheading">
-                                <h6 class="main-notification-title">Ipan</h6>
+                                <h6 class="main-notification-title">pahril</h6>
                                 <p class="main-notification-text">Admin</p>
                             </div>
-                            <a class="dropdown-item border-top" href="/profil">
+                            <a class="dropdown-item border-top" href="profile">
                                 <i class="fe fe-user"></i> Profil
                             </a>
                             {{-- <a class="dropdown-item" href="/editprofil">
@@ -265,11 +266,11 @@
                             </a>
                             <div class="dropdown-menu">
                                 <div class="header-navheading">
-                                    <h6 class="main-notification-title">Ipan</h6>
+                                    <h6 class="main-notification-title">fahril</h6>
                                     <p class="main-notification-text">Admin</p>
                                 </div>
-                                <a class="dropdown-item border-top" href="/profil">
-                                    <i class="fe fe-user"></i> Profil
+                                <a class="dropdown-item border-top" href="profile">
+                                    <i class="fe fe-user"></i> Profile
                                 </a>
                                 {{-- <a class="dropdown-item" href="/editprofil">
                                 <i class="fe fe-edit"></i> Edit Profil

@@ -23,6 +23,17 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
 
+
+
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware('auth');
+
+Route::get('/maintenance', function () {
+    return view('maintenance');
+})->middleware('auth');
+
+
 //Login
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
@@ -31,7 +42,9 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Halaman Sekolah
 
+
 //
+
 
 Route::get('/sekolah', [SekolahController::class, 'index'])->name('sekolah')->middleware('auth');
 Route::get('/tambah_sekolah', [SekolahController::class, 'tambah'])->name('tambah_sekolah')->middleware('auth');
