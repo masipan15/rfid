@@ -8,8 +8,8 @@
                 <div class="card-body">
                     <div>
                         <div>
-                            <a href="/tambah_siswa" class="btn btn-primary">Tambah</a>
-                            <p class="text- muted card-sub-title"></p>
+                            <a href="/tambah_sekolah" class="btn btn-primary">Tambah</a>
+                            <p class="text-muted card-sub-title"></p>
                         </div>
 
                         <p class="text-muted card-sub-title"></p>
@@ -19,11 +19,12 @@
                             <thead>
                                 <tr>
                                     <th class="wd-20p">No</th>
-                                    <th class="wd-20p">Id Siswa</th>
-                                    <th class="wd-20p">Nama Siswa</th>
-                                    <th class="wd-20p">Jenis Kelamin</th>
-                                    <th class="wd-20p">Asal Sekolah</th>
-                                    <th class="wd-20p">Aksi </th>
+                                    <th class="wd-20p">Tanggal</th>
+                                    <th class="wd-20p">Jam Masuk</th>
+                                    <th class="wd-20p">Jam Istirahat</th>
+                                    <th class="wd-20p">Jam Kembali</th>
+                                    <th class="wd-20p">Jam Pulang</th>
+                                    <th class="wd-20p">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,13 +34,14 @@
                                 @foreach ($data as $row)
                                     <tr>
                                         <td>{{ $no++ }}</td>
-                                        <td>{{ $row->id_siswa }}</td>
-                                        <td>{{ $row->nama_siswa }}</td>
-                                        <td>{{ $row->jenis_kelamin }}</td>
-                                        <td>{{ $row->sekolah->nama_sekolah }}</td>
-                                        <td><a href="edit_siswa/{{ $row->id }}" type="button"
+                                        <td>{{ $row->created_at }}</td>
+                                        <td>{{ $row->jam_masuk }}</td>
+                                        <td>{{ $row->jam_istirahat }}</td>
+                                        <td>{{ $row->jam_kembali }}</td>
+                                        <td>{{ $row->jam_pulang }}</td>
+                                        <td><a href="edit_sekolah/{{ $row->id }}" type="button"
                                                 class="btn btn-info">Edit</a>
-                                            <a href="delete_siswa/{{ $row->id }}" type="button"
+                                            <a href="delete_sekolah/{{ $row->id }}" type="button"
                                                 class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>

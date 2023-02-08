@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AbsenController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RekapController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SekolahController;
 use GuzzleHttp\Middleware;
@@ -62,6 +63,13 @@ Route::get('/edit_siswa/{id}', [SiswaController::class, 'edit'])->name('edit_sis
 Route::post('/update_siswa/{id}', [SiswaController::class, 'update'])->name('update_siswa')->middleware('auth');
 Route::get('/delete_siswa/{id}', [SiswaController::class, 'delete'])->name('delete_siswa')->middleware('auth');
 Route::get('/delete_siswa/{id}', [AbsenController::class, 'delete'])->name('delete_siswa')->middleware('auth');
+
+
+//Rekap Absen
+Route::get('/rekap', [RekapController::class, 'index'])->name('rekap');
+Route::post('/insert_rekap', [RekapController::class, 'insert'])->name('insert_rekap')->middleware('auth');
+
+Route::get('/scan', [AbsenController::class, 'scan'])->name('scan');
 
 
 Route::get('/absen', [AbsenController::class, 'absen'])->name('absen');

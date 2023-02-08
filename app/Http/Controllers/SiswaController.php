@@ -17,7 +17,7 @@ class SiswaController extends Controller
     public function tambah()
     {
         $sekolah = Sekolah::all();
-        return view('siswa.tambah',compact('sekolah'));
+        return view('siswa.tambah', compact('sekolah'));
     }
 
     public function insert(Request $request)
@@ -27,6 +27,7 @@ class SiswaController extends Controller
             'nama_siswa' => $request->nama_siswa,
             'jenis_kelamin' => $request->jenis_kelamin,
             'asal_sekolah' => $request->asal_sekolah,
+            'status' => 'aktif',
         ]);
         return redirect('siswa');
     }
@@ -35,7 +36,7 @@ class SiswaController extends Controller
     {
         $data = Siswa::findorfail($id);
         $sekolah = Sekolah::all();
-        return view('siswa.edit',compact('data','sekolah'));
+        return view('siswa.edit', compact('data', 'sekolah'));
     }
 
     public function update($id, Request $request)
