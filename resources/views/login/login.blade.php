@@ -166,9 +166,9 @@ a{color:inherit;text-decoration:none}
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
             <div class="login-form">
-                <div class="sign-in-htm">
+                <div class="sign-in-html">
                     <div class="group">
-                        <label for="user" class="label">Username</label>
+                        <label for="user" class="label">Email</label>
                         <input id="user" name="email" type="text" class="input">
                     </div>
                     <div class="group">
@@ -184,7 +184,7 @@ a{color:inherit;text-decoration:none}
                     </div>
                     <div class="hr"></div>
                     <div class="foot-lnk">
-                        <a href="#forgot">Forgot Password?</a>
+                        <a href="maintenance">Forgot Password?</a>
                     </div>
                 </div>
             </div>

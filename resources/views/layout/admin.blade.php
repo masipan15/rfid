@@ -157,7 +157,7 @@
                     <div class="dropdown main-profile-menu">
                         <a class="d-flex" href="">
                             <span class="main-imuser"><img alt="avatar" style="width: 50px;
-                            " src="https://resolusidigital.com/wp-content/uploads/2021/12/foto-profil-wa-tidak-bisa-muncul11.jpg" class="image-previewer"></span>
+                            " src="https://img1.pngdownload.id/20180525/iut/kisspng-computer-icons-user-profile-user-account-clip-art-5b07b23a6bf3c7.0766419815272310344422.jpg" class="image-previewer"></span>
                         </a>
                         <div class="dropdown-menu">
                             <div class="header-navheading">
