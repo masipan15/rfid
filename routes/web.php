@@ -23,6 +23,11 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
 
+Route::get('tes', function () {
+    return view('tes');
+})->middleware('auth');
+
+
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth');
