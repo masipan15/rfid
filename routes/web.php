@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AbsenController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RekapController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SekolahController;
 use GuzzleHttp\Middleware;
@@ -36,6 +37,7 @@ Route::get('/maintenance', function () {
     return view('maintenance');
 })->middleware('auth');
 
+
 //Login
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
@@ -43,6 +45,9 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // Halaman Sekolah
+
+
+//
 
 
 Route::get('/sekolah', [SekolahController::class, 'index'])->name('sekolah')->middleware('auth');
@@ -63,5 +68,11 @@ Route::get('/delete_siswa/{id}', [SiswaController::class, 'delete'])->name('dele
 Route::get('/delete_siswa/{id}', [AbsenController::class, 'delete'])->name('delete_siswa')->middleware('auth');
 
 
-Route::get('/absen',[AbsenController::class,'absen'])->name('absen');
+//Rekap Absen
+Route::get('/rekap', [RekapController::class, 'index'])->name('rekap');
+Route::post('/insert_rekap', [RekapController::class, 'insert'])->name('insert_rekap')->middleware('auth');
 
+Route::get('/scan', [AbsenController::class, 'scan'])->name('scan');
+
+
+Route::get('/absen', [AbsenController::class, 'absen'])->name('absen');

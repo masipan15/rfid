@@ -155,8 +155,9 @@
                 <div class="main-header-right">
 
                     <div class="dropdown main-profile-menu">
-                        <a class="d-flex" href="#">
-                            <span class="main-img-user"><img alt="avatar" class="image-previewer"></span>
+                        <a class="d-flex" href="">
+                            <span class="main-imuser"><img alt="avatar" style="width: 50px;
+                            " src="https://img1.pngdownload.id/20180525/iut/kisspng-computer-icons-user-profile-user-account-clip-art-5b07b23a6bf3c7.0766419815272310344422.jpg" class="image-previewer"></span>
                         </a>
                         <div class="dropdown-menu">
                             <div class="header-navheading">

@@ -15,10 +15,6 @@ return new class extends Migration
     {
         Schema::create('absens', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_siswa');
-            $table->string('nama_siswa');
-            $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
-            $table->foreignId('asal_sekolah')->constrained('sekolahs')->onDelete('Restrict')->onUpdate('Cascade');
             $table->timestamps();
         });
     }
