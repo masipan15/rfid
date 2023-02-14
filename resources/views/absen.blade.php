@@ -18,14 +18,14 @@
     <div class="containerfluid mt-5" style="text-align:center;">
         <h3>
             <?php
-            $jam = now()->format('H:i:s');
+            $jam = now('Asia/Jakarta')->format('H:i:s');
             ?>
             Silahkan Scan Kartu anda Untuk Absen:
-            @if ($jam >= '05:00' && $jam <= '09:30')
+            @if ($jam >= '05:00:00' && $jam <= '09:30:00')
                 Masuk
-            @elseif ($jam >= '09:31' && $jam <= '10:10')
+            @elseif ($jam >= '09:31:00' && $jam <= '10:10:00')
                 Istirahat
-            @elseif ($jam >= '10:11' && $jam <= '11:00')
+            @elseif ($jam >= '10:11:00' && $jam <= '11:00:00')
                 Kembali
             @else
                 Pulang

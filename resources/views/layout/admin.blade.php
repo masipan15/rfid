@@ -124,10 +124,10 @@
                     <a class="nav-link" href="/siswa"><span class="shape1"></span><span class="shape2"></span><i
                             class="ti-package sidemenu-icon"></i><span class="sidemenu-label">Siswa/Siswi</span></a>
                 </li>
-                <li class="nav-item {{ Route::is('suratkeluar', 'tambahbarang', 'editbarang') ? 'active' : '' }}">
-                    <a class="nav-link" href="/suratkeluar"><span class="shape1"></span><span
+            <li class="nav-item {{ Route::is('rekap', 'tambahbarang', 'editbarang') ? 'active' : '' }}">
+                    <a class="nav-link" href="/rekap"><span class="shape1"></span><span
                             class="shape2"></span><i class="ti-package sidemenu-icon"></i><span
-                            class="sidemenu-label">Absen</span></a>
+                            class="sidemenu-label">Rekap</span></a>
                 </li>
                 <li class="nav-item {{ Route::is('sekolah', 'tambah_sekolah', 'edit_sekolah') ? 'active' : '' }}">
                     <a class="nav-link" href="/sekolah"><span class="shape1"></span><span class="shape2"></span><i
