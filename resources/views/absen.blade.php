@@ -18,7 +18,7 @@
     <div class="containerfluid mt-5" style="text-align:center;">
         <h3>
             <?php
-            $jam = now()->format('H:i:s');
+            $jam = now('Asia/Jakarta')->format('H:i:s');
             ?>
             Silahkan Scan Kartu anda Untuk Absen:
             @if ($jam >= '05:00' && $jam <= '09:30')
@@ -32,9 +32,9 @@
             @endif
         </h3>
         <img src="{{ asset('images/scan.gif') }}" style="width:600px">
-        <form action="proses" method="POST">
+        <form action="proses_absen" method="POST">
             @csrf
-            <input type="text" name="absen" autofocus>
+            <input type="text" name="id_kartu" autofocus>
         </form>
     </div>
 </body>
