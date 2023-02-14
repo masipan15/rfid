@@ -18,8 +18,8 @@
     @if (Session('error'))
     <div class="alert alert-success">{{ Session('error') }}</div>
     @endif
-    @if (Session('as'))
-    <div class="alert alert-success">{{ Session('error') }}</div>
+    @if (Session('success'))
+    <div class="alert alert-success">{{ Session('success') }}</div>
     @endif
     <div class="containerfluid mt-5" style="text-align:center;">
         <h3>

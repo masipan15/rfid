@@ -59,7 +59,7 @@
                                             <td><span class="badge badge-pill badge-danger "
                                                     title="Terlambat">{{ $row->jam_kembali }}</span></td>
                                         @endif
-                                        @if ($jam >= '18:00' && $jam <= '20:00')
+                                        @if ($jam >= '12:00' && $jam <= '17:00')
                                             <td><span class="badge badge-pill badge-success "
                                                     title="Tepat Waktu">{{ $row->jam_pulang }}</span></td>
                                         @else

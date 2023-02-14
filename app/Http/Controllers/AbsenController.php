@@ -32,10 +32,11 @@ class AbsenController extends Controller
                     'jam_masuk' => $jam,
                     'created_at' => Carbon::now()
                ]);
+
         }
     }else{
         if ($a->jam_istirahat==null) {
-            if ($jam >= '11:29' && $jam <= '12:00') {
+            if ($jam >= '09:00' && $jam <= '10:20') {
               $a->update([
                     'nama_siswa' => $a->nama_siswa,
                     'jam_masuk' => $a->jam_masuk,
@@ -43,31 +44,35 @@ class AbsenController extends Controller
                     'created_at' => Carbon::now()
                ]);
         }
-    }else {
-            return back()->with('error','Anda Sudah Absen Istirahat Hari ini ');
-        }
+        return back()->with('success','Berhasil Absen');
+    }
+        if ($a->jam_kembali==null) {
+            if ($jam >= '10:25' && $jam <= '11:00') {
+              $a->update([
+                    'nama_siswa' => $a->nama_siswa,
+                    'jam_masuk' => $a->jam_masuk,
+                    'jam_istirahat' => $a->jam_istirahat,
+                    'jam_kembali' => $jam,
+                    'created_at' => Carbon::now()
+               ]);
+            }
+            return back()->with('success','Berhasil Absen');
+    }
+        if ($a->jam_pulang==null) {
+            if ($jam >= '12:00' && $jam <= '17:00') {
+              $a->update([
+                    'nama_siswa' => $a->nama_siswa,
+                    'jam_masuk' => $a->jam_masuk,
+                    'jam_istirahat' => $a->jam_istirahat,
+                    'jam_kembali' => $a->jam_kembali,
+                    'jam_pulang' => $jam,
+                    'created_at' => Carbon::now()
+               ]);
+            }
+            return back()->with('success','Berhasil Absen');
+    }
 
-
-    //     if ($jam >= '11:30' && $jam <= '12:00') {
-    //           $a->update([
-    //                 'nama_siswa' => $a->nama_siswa,
-    //                 'jam_masuk' => $a->jam_masuk,
-    //                 'jam_istirahat' => $a->jam_istirahat,
-    //                 'jam_kembali' => $jam,
-    //                 'created_at' => Carbon::now()
-    //            ]);
-    // }
-    //     if ($jam >= '11:30' && $jam <= '12:00') {
-    //           $a->update([
-    //                 'nama_siswa' => $a->nama_siswa,
-    //                 'jam_masuk' => $a->jam_masuk,
-    //                 'jam_istirahat' => $a->jam_istirahat,
-    //                 'jam_kembali' => $a->jam_kembali,
-    //                 'jam_pulang' => $jam,
-    //                 'created_at' => Carbon::now()
-    //            ]);
-    // }
 }
-        return back()->with('error','Anda Tidak dapat absen Istirahat karena tidak ABsen masuk hari ini ');
+        return back()->with('error','Anda Sudah Absen');
     }
 }
