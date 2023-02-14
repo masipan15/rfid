@@ -15,6 +15,12 @@
 </head>
 
 <body>
+    @if (Session('error'))
+    <div class="alert alert-success">{{ Session('error') }}</div>
+    @endif
+    @if (Session('as'))
+    <div class="alert alert-success">{{ Session('error') }}</div>
+    @endif
     <div class="containerfluid mt-5" style="text-align:center;">
         <h3>
             <?php
@@ -38,6 +44,14 @@
         </form>
     </div>
 </body>
-<script></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{-- <script>
+Swal.fire({
+    icon: 'success',
+    title: 'Oops...',
+    text: 'Something went wrong!',
+    footer: '<a href="">Why do I have this issue?</a>'
+  })
+  </script> --}}
 
 </html>

@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('acstemplate/assets/img/brand/acs1.ico') }}" type="image/x-icon" />
+
+    <!-- Title -->
+    <title>ACS Management</title>
 </head>
 
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,500">
@@ -13,36 +17,51 @@
 
 
 <body>
-	<form action="/loginproses" method="POST">
-        @csrf
-    <div class="login-wrap">
-        <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-            <div class="login-form">
-                <div class="sign-in-html">
-                    <div class="group">
-                        <label for="user" class="label">Email</label>
-                        <input id="user" name="email" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="pass" name="password" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <input id="check" type="checkbox" class="check" checked>
-                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="Sign In">
-                    </div>
-                    <div class="hr"></div>
-                    <div class="foot-lnk">
-                        <a href="maintenance">Forgot Password?</a>
-                    </div>
-                </div>
+
+    <div class="login">
+        <div class="photo">
+        </div>
+        <span><h5>Login</h5></span>
+        <form action="/loginproses" method="POST" id="login-form">
+            @csrf
+           
+            <div id="u" class="form-group">
+                <input id="email" spellcheck=false class="form-control" name="email" type="text" size="18"
+                    alt="login" required="">
+                <span class="form-highlight"></span>
+                <span class="form-bar"></span>
+                <label for="email" class="float-label"><b>
+                        <h3>Email</h3>
+                    </b></label>
+            </div>
+            @error('email')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+
+            <div id="p" class="form-group">
+                <input id="password" class="form-control" spellcheck=false name="password" type="password"
+                    size="18" alt="login" required="">
+                <span class="form-highlight"></span>
+                <span class="form-bar"></span>
+                <label for="password" class="float-label"><b>
+                        <h3>Sandi</h3>
+                    </b></label>
+            </div>
+            @error('password')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+
+            <input type="text" value="desain" name="role" hidden>
+
+            <div class="form-group">
+                <input type="checkbox" onclick="myFunction()" id="rem">
+                <label for="rem">Tampilkan Sandi</label>
+                <button id="submit" type="submit" ripple>Daftar</button>
             </div>
         </form>
+        <footer><a href="/login">Sudah Punya Akun ? Masuk</a></footer>
+    </div>
+
 </body>
 
 <script src="http//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

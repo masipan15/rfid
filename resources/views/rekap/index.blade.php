@@ -38,7 +38,7 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $row->created_at->translatedFormat('l/d/F/Y') }}</td>
                                         <td>{{ $row->nama_siswa }}</td>
-                                        @if ($jam >= '06:00' && $jam <= '0')
+                                        @if ($jam >= '06:00' && $jam <= '06:45')
                                             <td><span class="badge badge-pill badge-success "
                                                     title="Tepat Waktu">{{ $row->jam_masuk }}</span></td>
                                         @else

@@ -23,6 +23,7 @@
                                     <th class="wd-20p">Nama Siswa</th>
                                     <th class="wd-20p">Jenis Kelamin</th>
                                     <th class="wd-20p">Asal Sekolah</th>
+                                    <th class="wd-20p">Status</th>
                                     <th class="wd-20p">Aksi </th>
                                 </tr>
                             </thead>
@@ -37,6 +38,11 @@
                                         <td>{{ $row->nama_siswa }}</td>
                                         <td>{{ $row->jenis_kelamin }}</td>
                                         <td>{{ $row->sekolah->nama_sekolah }}</td>
+                                        @if ($row->status=='aktif')
+                                        <td><span class="badge badge-pill badge-success "
+                                            title="Tepat Waktu">{{ $row->status }} </span></td>
+                                        @endif
+
                                         <td><a href="edit_siswa/{{ $row->id }}" type="button"
                                                 class="btn btn-info">Edit</a>
                                             <a href="delete_siswa/{{ $row->id }}" type="button"
