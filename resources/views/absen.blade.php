@@ -32,9 +32,9 @@
             @endif
         </h3>
         <img src="{{ asset('images/scan.gif') }}" style="width:600px">
-        <form action="proses" method="POST">
+        <form action="proses_absen" method="POST">
             @csrf
-            <input type="text" name="absen" autofocus>
+            <input type="text" name="id_kartu" autofocus>
         </form>
     </div>
 </body>

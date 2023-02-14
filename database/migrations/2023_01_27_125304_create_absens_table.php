@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('absens', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_kartu');
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('rekaps', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('nama_siswa')->nullable();
+            $table->string('nama_siswa');
             $table->string('jam_masuk')->nullable();
             $table->string('jam_istirahat')->nullable();
             $table->string('jam_kembali')->nullable();

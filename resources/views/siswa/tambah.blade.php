@@ -49,7 +49,7 @@
                                 Tambah
                             </button>
                     </form>
-                    <a href="/sekolah" type="button" class="btn btn-secondary">Kembali</a>
+                    <a href="/siswa" type="button" class="btn btn-secondary">Kembali</a>
                 </div>
             </div>
         </div>
