@@ -35,7 +35,7 @@ class AbsenController extends Controller
 
         }
     }else{
-        if ($a->jam_istirahat==null) {
+
             if ($jam >= '09:00' && $jam <= '10:20') {
               $a->update([
                     'nama_siswa' => $a->nama_siswa,
@@ -43,10 +43,9 @@ class AbsenController extends Controller
                     'jam_istirahat' => $jam,
                     'created_at' => Carbon::now()
                ]);
-        }
-        return back()->with('success','Berhasil Absen');
+
     }
-        if ($a->jam_kembali==null) {
+
             if ($jam >= '10:25' && $jam <= '11:00') {
               $a->update([
                     'nama_siswa' => $a->nama_siswa,
@@ -55,10 +54,9 @@ class AbsenController extends Controller
                     'jam_kembali' => $jam,
                     'created_at' => Carbon::now()
                ]);
-            }
-            return back()->with('success','Berhasil Absen');
+
     }
-        if ($a->jam_pulang==null) {
+
             if ($jam >= '12:00' && $jam <= '17:00') {
               $a->update([
                     'nama_siswa' => $a->nama_siswa,
@@ -68,11 +66,10 @@ class AbsenController extends Controller
                     'jam_pulang' => $jam,
                     'created_at' => Carbon::now()
                ]);
-            }
-            return back()->with('success','Berhasil Absen');
+
     }
 
 }
-        return back()->with('error','Anda Sudah Absen');
+        return back()->with('error','Anda Berhasil Absen');
     }
 }
