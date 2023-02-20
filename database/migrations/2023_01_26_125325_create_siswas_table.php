@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('siswas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_siswa');
+            $table->bigInteger('id_siswa')->unique( );
             $table->string('nama_siswa');
             $table->string('jenis_kelamin');
             $table->foreignId('asal_sekolah')->constrained('sekolahs')->onUpdate('cascade')->onDelete('restrict');

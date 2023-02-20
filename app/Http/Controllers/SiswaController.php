@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sekolah;
 use App\Models\Siswa;
+use App\Models\Sekolah;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SiswaController extends Controller
 {
@@ -22,6 +23,12 @@ class SiswaController extends Controller
 
     public function insert(Request $request)
     {
+        $validation = $request->validate([
+            'id_siswa' => 'unique:siswas'
+        ],[
+            'id_siswa.unique' => 'id Siswa Sudah Digunakan'
+        ]);
+
         $data = Siswa::create([
             'id_siswa' => $request->id_siswa,
             'nama_siswa' => $request->nama_siswa,
@@ -29,6 +36,7 @@ class SiswaController extends Controller
             'asal_sekolah' => $request->asal_sekolah,
             'status' => 'aktif',
         ]);
+        Alert::success('Data Berhasil ditambahkan');
         return redirect('siswa');
     }
 
@@ -56,6 +64,7 @@ class SiswaController extends Controller
     {
         $data = Siswa::find($id);
         $data->delete();
-        return redirect('siswa');
+        Alert::success('Data Berhasil Dihapus');
+        return back();
     }
 }

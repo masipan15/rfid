@@ -86,6 +86,7 @@
     <link href="{{ asset('acstemplate/assets/switcher/demo.css') }}" rel="stylesheet">
 </head>
 <body class="main-body leftmenu">
+    @include('sweetalert::alert')
 
 
     <!-- Loader -->

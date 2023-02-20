@@ -66,9 +66,9 @@
                                             <td><span class="badge badge-pill badge-danger "
                                                     title="Terlambat">{{ $row->jam_pulang }}</span></td>
                                         @endif
-                                        <td><a href="edit_sekolah/{{ $row->id }}" type="button"
+                                        <td><a href="edit_rekap/{{ $row->id }}" type="button"
                                                 class="btn btn-info">Edit</a>
-                                            <a href="delete_sekolah/{{ $row->id }}" type="button"
+                                            <a href="delete_rekap/{{ $row->id }}" type="button"
                                                 class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>

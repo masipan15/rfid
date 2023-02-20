@@ -65,13 +65,15 @@ Route::post('/insert_siswa', [SiswaController::class, 'insert'])->name('insert_s
 Route::get('/edit_siswa/{id}', [SiswaController::class, 'edit'])->name('edit_siswa');
 Route::post('/update_siswa/{id}', [SiswaController::class, 'update'])->name('update_siswa');
 Route::get('/delete_siswa/{id}', [SiswaController::class, 'delete'])->name('delete_siswa');
-Route::get('/delete_siswa/{id}', [AbsenController::class, 'delete'])->name('delete_siswa');
 
 
 //Rekap Absen
 Route::get('/rekap', [RekapController::class, 'index'])->name('rekap');
 Route::post('/insert_rekap', [RekapController::class, 'insert'])->name('insert_rekap');
+Route::get('/edit_rekap/{id}', [RekapController::class, 'edit'])->name('edit_rekap');
+Route::post('/update_rekap/{id}', [RekapController::class, 'update'])->name('update_rekap');
+Route::get('/delete_rekap/{id}', [RekapController::class, 'delete'])->name('delete_rekap');
 
 
-Route::get('/absen', [SekolahController::class, 'absen'])->name('absen');
-Route::post('/proses_absen', [SekolahController::class, 'proses_absen'])->name('proses_absen');
+Route::get('/absen', [AbsenController::class, 'absen'])->name('absen');
+Route::post('/proses_absen', [AbsenController::class, 'proses_absen'])->name('proses_absen');

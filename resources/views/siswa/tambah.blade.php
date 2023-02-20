@@ -15,6 +15,11 @@
                             <label class="form-label">Id Siswa</label>
                             <input type="number" autofocus class="form-control" name="id_siswa">
                         </div>
+                        @error('id_siswa')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+
+
                         <div class="mb-3">
                             <label class="form-label">Nama Siswa</label>
                             <input type="text" required class="form-control" name="nama_siswa">

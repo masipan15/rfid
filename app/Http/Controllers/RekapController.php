@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Rekap;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RekapController extends Controller
 {
@@ -11,11 +12,6 @@ class RekapController extends Controller
     {
         $data = Rekap::all();
         return view('rekap.index', compact('data'));
-    }
-
-    public function tambah()
-    {
-        return view('sekolah.tambah');
     }
 
     public function insert(Request $request)
@@ -29,23 +25,28 @@ class RekapController extends Controller
     public function edit($id)
     {
         $data = Rekap::findorfail($id);
-        return view('sekolah.edit', compact('data'));
+        return view('rekap.edit', compact('data'));
     }
 
     public function update($id, Request $request)
     {
         $data = Rekap::find($id);
         $data->update([
-            'nama_sekolah' => $request->nama_sekolah
+            'nama_siswa' => $data->nama_siswa,
+            'jam_masuk' => $request->jam_masuk,
+            'jam_istirahat' => $request->jam_istirahat,
+            'jam_kembali' => $request->jam_kembali,
+            'jam_pulang' => $request->jam_pulang,
         ]);
-
-        return redirect('sekolah');
+        Alert::success('Data Berhasil Dirubah');
+        return redirect('rekap');
     }
 
     public function delete($id)
     {
         $data = Rekap::find($id);
         $data->delete();
-        return redirect('sekolah');
+        Alert::success('Data Berhasil Dihapus');
+        return redirect('rekap');
     }
 }
