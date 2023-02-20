@@ -85,7 +85,6 @@
     <link href="{{ asset('acstemplate/assets/switcher/css/switcher.css') }}" rel="stylesheet">
     <link href="{{ asset('acstemplate/assets/switcher/demo.css') }}" rel="stylesheet">
 </head>
-
 <body class="main-body leftmenu">
 
 

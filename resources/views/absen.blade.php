@@ -15,12 +15,6 @@
 </head>
 
 <body>
-    @if (Session('error'))
-    <div class="alert alert-success">{{ Session('error') }}</div>
-    @endif
-    @if (Session('success'))
-    <div class="alert alert-success">{{ Session('success') }}</div>
-    @endif
     <div class="containerfluid mt-5" style="text-align:center;">
         <h3>
             <?php
@@ -43,6 +37,8 @@
             <input type="text" name="id_kartu" autofocus>
         </form>
     </div>
+    @include('sweetalert::alert')
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {{-- <script>
